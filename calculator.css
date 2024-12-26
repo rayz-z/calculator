@@ -1,0 +1,28 @@
+h1, #display {
+    background-color: white;
+    border: 2px solid black;
+    width: 400px;
+    text-align: right;
+}
+
+#layer1 {
+    display: flex;
+}
+
+#layer2 {
+    display: flex;
+}
+
+#layer3 {
+    display: flex;
+}
+
+#layer4 {
+    display: flex;
+}
+
+button {
+    width: 100px;
+    height: 60px;
+    font-size: 20px;
+}
