@@ -68,7 +68,6 @@ btn9.addEventListener("click", () => {
     }
 });
 
-const btnDivide = document.querySelector("#divide");
 const btn4 = document.querySelector("#four");
 btn4.addEventListener("click", () => {
     if (display.textContent == 0) {
@@ -144,7 +143,7 @@ btn0.addEventListener("click", () => {
 
 const btnEquals = document.querySelector("#equals");
 btnEquals.addEventListener("click", () => {
-    secondNumber = Math.abs(parseInt(display.textContent));
+    secondNumber = parseInt(display.textContent.slice(1));
     display.textContent = operate(firstNumber, secondNumber, operator);
     console.log(firstNumber, secondNumber, operator);
 });
@@ -161,6 +160,20 @@ btnSubtract.addEventListener("click", () => {
     firstNumber = parseInt(display.textContent);
     display.textContent = '-';
     operator = '-';
+})
+
+const btnDivide = document.querySelector("#divide");
+btnDivide.addEventListener("click", () => {
+    firstNumber = parseInt(display.textContent);
+    display.textContent = '/';
+    operator = '/';
+})
+
+const btnMultiply = document.querySelector("#multiply");
+btnMultiply.addEventListener("click", () => {
+    firstNumber = parseInt(display.textContent);
+    display.textContent = '*';
+    operator = '*';
 })
 
 const clear = document.querySelector("#clear");
