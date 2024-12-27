@@ -19,6 +19,7 @@ function operate(a, b, operator) {
         case '+':
             return add(a,b);
         case '-':
+            console.log('me');
             return subtract(a,b);
         case '/':
             return divide(a,b);
@@ -143,8 +144,9 @@ btn0.addEventListener("click", () => {
 
 const btnEquals = document.querySelector("#equals");
 btnEquals.addEventListener("click", () => {
-    secondNumber = parseInt(display.textContent);
+    secondNumber = Math.abs(parseInt(display.textContent));
     display.textContent = operate(firstNumber, secondNumber, operator);
+    console.log(firstNumber, secondNumber, operator);
 });
 
 const btnAdd = document.querySelector("#add");
